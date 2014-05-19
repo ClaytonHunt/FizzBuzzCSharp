@@ -1,4 +1,6 @@
-﻿namespace FizzBuzzTest.Bridge
+﻿using System.Globalization;
+
+namespace FizzBuzzTest.Bridge
 {
     public class BridgeFizzBuzz : IFizzBuzzCommand
     {
@@ -8,7 +10,7 @@
         {
             public string Output(int value)
             {
-                return value.ToString();
+                return value.ToString(CultureInfo.InvariantCulture);
             }
         }
 

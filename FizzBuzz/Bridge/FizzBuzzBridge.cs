@@ -1,4 +1,6 @@
-﻿namespace FizzBuzzTest.Bridge
+﻿using System.Globalization;
+
+namespace FizzBuzzTest.Bridge
 {
     public class FizzBuzzBridge : IOutputBridge
     {
@@ -13,7 +15,7 @@
             if (CanBuzz(value))
                 return "Buzz";
 
-            return value.ToString();
+            return value.ToString(CultureInfo.InvariantCulture);
         }
 
         private static bool CanFizz(int value)

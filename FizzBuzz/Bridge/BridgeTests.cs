@@ -10,12 +10,12 @@ namespace FizzBuzzTest.Bridge
             Fb = new BridgeFizzBuzz(new FizzBuzzBridge());
         }
 
-        private BridgeFizzBuzz NumberSetup()
+        private static BridgeFizzBuzz NumberSetup()
         {
             return new BridgeFizzBuzz();
         }
 
-        private BridgeFizzBuzz BarBazSetup()
+        private static BridgeFizzBuzz BarBazSetup()
         {
             return new BridgeFizzBuzz(new BarBazBridge());
         }
@@ -64,7 +64,7 @@ namespace FizzBuzzTest.Bridge
             CheckBridge(fb, value, expected);
         }
 
-        private void CheckBridge(BridgeFizzBuzz fb, int value, string expected)
+        private static void CheckBridge(IFizzBuzzCommand fb, int value, string expected)
         {
             // Act
             var result = fb.Execute(value);
