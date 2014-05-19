@@ -1,4 +1,4 @@
-namespace FizzBuzzTest.Procedural
+namespace FizzBuzzTest
 {
     public interface IFizzBuzzCommand
     {
