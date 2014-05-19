@@ -50,6 +50,10 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Bridge\BarBazBridge.cs" />
+    <Compile Include="Bridge\BridgeFizzBuzz.cs" />
+    <Compile Include="Bridge\BridgeTests.cs" />
+    <Compile Include="Bridge\FizzBuzzBridge.cs" />
     <Compile Include="CoreTests.cs" />
     <Compile Include="IFizzBuzzCommand.cs" />
     <Compile Include="Procedural\ProceduralFizzBuzz.cs" />
