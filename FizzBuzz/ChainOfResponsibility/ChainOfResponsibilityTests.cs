@@ -7,20 +7,12 @@ namespace FizzBuzzTest.ChainOfResponsibility
     {
         protected override void Setup()
         {
-            Fb = new ChainOfResponsibilityFizzBuzz();
-        }
-    }
+            var numberLink = new NumberLink();
+            var buzzLink = new BuzzLink(numberLink);
+            var fizzLink = new FizzLink(buzzLink);
+            var fizzBuzzLink = new FizzBuzzLink(fizzLink);
 
-    public class ChainOfResponsibilityFizzBuzz : IFizzBuzzCommand
-    {
-        public ChainOfResponsibilityFizzBuzz()
-        {
-            
-        }
-
-        public string Execute(int value)
-        {
-            return null;
+            Fb = new ChainOfResponsibilityFizzBuzz(fizzBuzzLink);
         }
     }
 }
