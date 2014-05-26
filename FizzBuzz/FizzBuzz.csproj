@@ -54,12 +54,14 @@
     <Compile Include="Bridge\BridgeFizzBuzz.cs" />
     <Compile Include="Bridge\BridgeTests.cs" />
     <Compile Include="Bridge\FizzBuzzBridge.cs" />
+    <Compile Include="ChainOfResponsibility\ChainOfResponsibilityTests.cs" />
     <Compile Include="CoreTests.cs" />
     <Compile Include="IFizzBuzzCommand.cs" />
     <Compile Include="Procedural\ProceduralFizzBuzz.cs" />
     <Compile Include="Procedural\ProceduralTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
